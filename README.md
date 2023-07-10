@@ -56,6 +56,8 @@ Para cada função de ativação, calculamos os valores y correspondentes e os p
 
 Os gráficos resultantes nos dão uma visualização clara de como cada função de ativação e sua derivada se comportam.
 
+![Gráfico da função de ativação](fa.png)
+
 ## Referências
 
 1. [Acervo Lima - Funções de Ativação em Redes Neurais](https://acervolima.com/funcoes-de-ativacao-em-redes-neurais/)
