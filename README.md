@@ -1,6 +1,7 @@
 # 🚀 Funções de Ativação em Redes Neurais
 
 ## 📌 Introdução
+
 As **funções de ativação** são componentes essenciais das redes neurais 🧠, pois introduzem **não linearidade** ao modelo, permitindo que a rede aprenda relações complexas entre as entradas e saídas.  
 
 Sem essas funções, uma rede neural profunda seria **equivalente a uma simples combinação linear** de suas camadas, tornando-a incapaz de resolver problemas mais complexos.  
@@ -14,6 +15,7 @@ Sem essas funções, uma rede neural profunda seria **equivalente a uma simples 
 Aqui estão as principais funções de ativação utilizadas em redes neurais, explicadas em detalhes:
 
 ### 1️⃣ Sigmoid (Logistic Function) 📈
+
 - **Fórmula:**  
   $$\sigma(x) = \frac{1}{1 + e^{-x}}$$
 - **Derivada:**  
@@ -27,6 +29,7 @@ Aqui estão as principais funções de ativação utilizadas em redes neurais, e
 ---
 
 ### 2️⃣ Tanh (Tangente Hiperbólica) 🔄
+
 - **Fórmula:**  
   $$tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$$
 - **Derivada:**  
@@ -39,6 +42,7 @@ Aqui estão as principais funções de ativação utilizadas em redes neurais, e
 ---
 
 ### 3️⃣ Softmax 🏆
+
 - **Fórmula:**  
   $$S(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}$$
 - **Forma:** Função vetorial que converte múltiplas saídas em probabilidades.
@@ -49,13 +53,16 @@ Aqui estão as principais funções de ativação utilizadas em redes neurais, e
 ---
 
 ### 4️⃣ ReLU ⚡ (Rectified Linear Unit)
+
 - **Fórmula:**  
   $$ReLU(x) = \max(0, x)$$
 - **Derivada:**  
-  $$ReLU'(x) = \begin{cases} 
-1, & x > 0 \\ 
-0, & x \leq 0 
+  $$ReLU'(x) = \begin{cases}
+
+1, & x > 0 \\
+0, & x \leq 0
 \end{cases}$$
+
 - **Forma:** Linear para valores positivos.
 - **Aplicações:**  
   ✅ Função mais utilizada em **redes profundas**.  
@@ -64,28 +71,35 @@ Aqui estão as principais funções de ativação utilizadas em redes neurais, e
 ---
 
 ### 5️⃣ Leaky ReLU 💡
+
 - **Fórmula:**  
-  $$LeakyReLU(x) = \begin{cases} 
-x, & x > 0 \\ 
-\alpha x, & x \leq 0 
+  $$LeakyReLU(x) = \begin{cases}
+
+x, & x > 0 \\
+\alpha x, & x \leq 0
 \end{cases}$$
+
 - **Aplicações:**  
   ✅ Soluciona o problema de **neurônios mortos** da ReLU.
 
 ---
 
 ### 6️⃣ ELU 🚀 (Exponential Linear Unit)
+
 - **Fórmula:**  
-  $$ELU(x) = \begin{cases} 
-x, & x > 0 \\ 
-\alpha (e^x - 1), & x \leq 0 
+  $$ELU(x) = \begin{cases}
+
+x, & x > 0 \\
+\alpha (e^x - 1), & x \leq 0
 \end{cases}$$
+
 - **Aplicações:**  
   ✅ Propaga melhor o gradiente do que ReLU.
 
 ---
 
 ### 7️⃣ Softsign 🔄
+
 - **Fórmula:**  
   $$Softsign(x) = \frac{x}{1 + |x|}$$
 - **Aplicações:**  
@@ -94,6 +108,7 @@ x, & x > 0 \\
 ---
 
 ### 8️⃣ Swish 🌟
+
 - **Fórmula:**  
   $$Swish(x) = x \cdot \sigma(x)$$
 - **Aplicações:**  
@@ -106,13 +121,13 @@ x, & x > 0 \\
 🔥 **Todas as funções de ativação foram plotadas interativamente**!  
 Clique nos gráficos para explorar diferentes comportamentos.  
 
-![Descrição da Imagem](fa.png)
+![Gráfico das Funções de Ativação e suas Derivadas](newplot.png)
 
 🔹 **Função de ativação** → **Violeta** 🟣  
 🔸 **Derivada** → **Laranja** 🟠  
 
-
 ## 📜 Conclusão
+
 🎯 As **funções de ativação** desempenham um papel **crucial** no aprendizado profundo.  
 🔍 Cada função tem suas vantagens e desvantagens, e **a escolha certa pode impactar diretamente a performance da rede**.
 
