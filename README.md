@@ -1,65 +1,121 @@
-# Funções de Ativação e suas Derivadas
+# 🚀 Funções de Ativação em Redes Neurais
 
-## Introdução
+## 📌 Introdução
+As **funções de ativação** são componentes essenciais das redes neurais 🧠, pois introduzem **não linearidade** ao modelo, permitindo que a rede aprenda relações complexas entre as entradas e saídas.  
 
-As funções de ativação em redes neurais são funções matemáticas aplicadas à saída de um neurônio. Elas são responsáveis por transformar a entrada linear em uma saída que é mais adequada para o contexto do problema, geralmente não-linear. Elas ajudam a rede a aprender de dados complexos, tomar decisões e prever resultados precisos. 
+Sem essas funções, uma rede neural profunda seria **equivalente a uma simples combinação linear** de suas camadas, tornando-a incapaz de resolver problemas mais complexos.  
 
-Neste documento, estamos explorando quatro funções de ativação diferentes: Sigmoide, Softsign, ReLU e Tanh. 
+📖 **Neste repositório, exploramos diversas funções de ativação**, abordando suas **representações matemáticas, aplicações, vantagens e desvantagens**.
 
-## Sigmoide
+---
 
-A função sigmoide é uma função de ativação que transforma qualquer número em um valor entre 0 e 1. Ela é útil para modelos onde precisamos prever a probabilidade como uma saída. A função sigmoide é expressa matematicamente como:
+## 📖 Teoria: Detalhamento das Funções de Ativação
 
-$$f(x) = \frac{1}{1 + e^{-x}}$$
+Aqui estão as principais funções de ativação utilizadas em redes neurais, explicadas em detalhes:
 
-A derivada da função sigmoide nos ajuda a entender como as mudanças na entrada afetam a saída:
+### 1️⃣ Sigmoid (Logistic Function) 📈
+- **Fórmula:**  
+  $$\sigma(x) = \frac{1}{1 + e^{-x}}$$
+- **Derivada:**  
+  $$\sigma'(x) = \sigma(x) \cdot (1 - \sigma(x))$$
+- **Forma:** Curva em "S" (sigmoide).
+- **Aplicações:**  
+  ✅ Modelagem probabilística  
+  ✅ Classificação binária  
+- **Problema:** Sofre com **gradiente desaparecendo**, dificultando o aprendizado em redes profundas.
 
-$$f'(x) = f(x) \cdot (1 - f(x))$$
+---
 
-## Softsign
+### 2️⃣ Tanh (Tangente Hiperbólica) 🔄
+- **Fórmula:**  
+  $$tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$$
+- **Derivada:**  
+  $$tanh'(x) = 1 - tanh^2(x)$$
+- **Forma:** Curva em "S", semelhante à Sigmoid.
+- **Aplicações:**  
+  ✅ Melhor desempenho que Sigmoid em **camadas ocultas**, pois é centrada em zero.  
+- **Problema:** Ainda sofre de **gradiente desaparecendo**, mas menos que Sigmoid.
 
-A função Softsign é uma alternativa à função de ativação tanh. Ela converge polinomialmente e produz uma saída entre -1 e 1. A função softsign é expressa matematicamente como:
+---
 
-$$f(x) = \frac{x}{1 + |x|}$$
+### 3️⃣ Softmax 🏆
+- **Fórmula:**  
+  $$S(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}$$
+- **Forma:** Função vetorial que converte múltiplas saídas em probabilidades.
+- **Aplicações:**  
+  ✅ Usada na **camada de saída** para **classificação multiclasse**.  
+- **Problema:** Pode ser **sensível a valores extremos**, então recomenda-se normalização.
 
-A derivada da função Softsign nos mostra como pequenas mudanças na entrada afetam a saída:
+---
 
-$$f'(x) = \frac{1}{(1 + |x|)^2}$$
+### 4️⃣ ReLU ⚡ (Rectified Linear Unit)
+- **Fórmula:**  
+  $$ReLU(x) = \max(0, x)$$
+- **Derivada:**  
+  $$ReLU'(x) = \begin{cases} 
+1, & x > 0 \\ 
+0, & x \leq 0 
+\end{cases}$$
+- **Forma:** Linear para valores positivos.
+- **Aplicações:**  
+  ✅ Função mais utilizada em **redes profundas**.  
+- **Problema:** Neurônios mortos (quando \( x < 0 \), a saída é 0 para sempre).
 
-## ReLU
+---
 
-ReLU, ou Unidade Linear Retificada, é uma função de ativação que produz zero para qualquer valor negativo e x para qualquer valor positivo. A função ReLU é expressa matematicamente como:
+### 5️⃣ Leaky ReLU 💡
+- **Fórmula:**  
+  $$LeakyReLU(x) = \begin{cases} 
+x, & x > 0 \\ 
+\alpha x, & x \leq 0 
+\end{cases}$$
+- **Aplicações:**  
+  ✅ Soluciona o problema de **neurônios mortos** da ReLU.
 
-$$f(x) = max(0, x)$$
+---
 
-O gráfico da derivada da ReLU é uma função degrau:
+### 6️⃣ ELU 🚀 (Exponential Linear Unit)
+- **Fórmula:**  
+  $$ELU(x) = \begin{cases} 
+x, & x > 0 \\ 
+\alpha (e^x - 1), & x \leq 0 
+\end{cases}$$
+- **Aplicações:**  
+  ✅ Propaga melhor o gradiente do que ReLU.
 
-$$f'(x) = 1 \quad if \quad x > 0; \quad 0 \quad otherwise$$
+---
 
-## Tanh
+### 7️⃣ Softsign 🔄
+- **Fórmula:**  
+  $$Softsign(x) = \frac{x}{1 + |x|}$$
+- **Aplicações:**  
+  ✅ Alternativa à Tanh.
 
-A função Tanh, ou tangente hiperbólica, é semelhante à sigmoide, mas seu valor de saída varia de -1 a 1. A função tanh é expressa matematicamente como:
+---
 
-$$f(x) = tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$$
+### 8️⃣ Swish 🌟
+- **Fórmula:**  
+  $$Swish(x) = x \cdot \sigma(x)$$
+- **Aplicações:**  
+  ✅ Melhor desempenho em redes modernas como **EfficientNet**.
 
-A derivada da função tanh mostra como pequenas mudanças na entrada mudam a saída:
+---
 
-$$f'(x) = 1 - (f(x))^2$$
+## 📊 Gráficos das Funções e Suas Derivadas
 
-## Código
+🔥 **Todas as funções de ativação foram plotadas interativamente**!  
+Clique nos gráficos para explorar diferentes comportamentos.  
 
-O código Python usado para gerar os gráficos dessas funções e suas derivadas utiliza a biblioteca matplotlib para a visualização e a biblioteca numpy para cálculos numéricos.
+![Descrição da Imagem](fa.png)
 
-Primeiro, definimos as funções de ativação e suas derivadas. Em seguida, geramos um conjunto de valores x usando a função `linspace` do numpy.
+🔹 **Função de ativação** → **Violeta** 🟣  
+🔸 **Derivada** → **Laranja** 🟠  
 
-Para cada função de ativação, calculamos os valores y correspondentes e os plotamos em um subplot separado, junto com a sua derivada.
 
-Os gráficos resultantes nos dão uma visualização clara de como cada função de ativação e sua derivada se comportam.
+## 📜 Conclusão
+🎯 As **funções de ativação** desempenham um papel **crucial** no aprendizado profundo.  
+🔍 Cada função tem suas vantagens e desvantagens, e **a escolha certa pode impactar diretamente a performance da rede**.
 
-![Gráfico da função de ativação](fa.png)
-
-## Referências
-
-1. [Wikipedia - Função de Ativação](https://pt.wikipedia.org/wiki/Fun%C3%A7%C3%A3o_de_ativa%C3%A7%C3%A3o)
-
-2. [Stanford University - CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/neural-networks-1/)
+✅ **Funções como ReLU, ELU e Swish** são as mais eficientes para redes neurais profundas.  
+❌ **Sigmoid e Tanh** são mais usadas para camadas ocultas menores.  
+🔢 **Softmax** é ideal para **classificação multiclasse**.
