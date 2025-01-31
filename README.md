@@ -118,9 +118,6 @@ x, & x > 0 \\
 
 ## 📊 Gráficos das Funções e Suas Derivadas
 
-🔥 **Todas as funções de ativação foram plotadas interativamente**!  
-Clique nos gráficos para explorar diferentes comportamentos.  
-
 ![Gráfico das Funções de Ativação e suas Derivadas](newplot.png)
 
 🔹 **Função de ativação** → **Violeta** 🟣  
