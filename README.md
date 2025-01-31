@@ -131,3 +131,18 @@ x, & x > 0 \\
 ✅ **Funções como ReLU, ELU e Swish** são as mais eficientes para redes neurais profundas.  
 ❌ **Sigmoid e Tanh** são mais usadas para camadas ocultas menores.  
 🔢 **Softmax** é ideal para **classificação multiclasse**.
+
+> ⚠️ **Nota sobre a Derivada da Softmax**  
+>
+> A **Softmax** é uma **função vetorial**, cuja derivada é uma **matriz Jacobiana** 🧮,  
+> impossibilitando uma representação gráfica direta.  
+>
+> 📌 **Solução:**  
+> Para visualização, usamos a **derivada parcial de um único neurônio** em relação à sua própria entrada:  
+>
+> $$
+> \frac{dSoftmax(x_i)}{dx_i} = Softmax(x_i) \cdot (1 - Softmax(x_i))
+> $$
+>
+> 🔹 Esse termo corresponde à derivada da **Sigmoid**, mas aplicada individualmente a cada saída da Softmax.
+
