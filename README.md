@@ -60,10 +60,6 @@ Os gráficos resultantes nos dão uma visualização clara de como cada função
 
 ## Referências
 
-1. [Acervo Lima - Funções de Ativação em Redes Neurais](https://acervolima.com/funcoes-de-ativacao-em-redes-neurais/)
+1. [Wikipedia - Função de Ativação](https://pt.wikipedia.org/wiki/Fun%C3%A7%C3%A3o_de_ativa%C3%A7%C3%A3o)
 
-2. [Wikipedia - Função de Ativação](https://pt.wikipedia.org/wiki/Fun%C3%A7%C3%A3o_de_ativa%C3%A7%C3%A3o)
-
-3. [Medium - Understanding Activation Functions in Neural Networks](https://medium.com/the-theory-of-everything/understanding-activation-functions-in-neural-networks-9491262884e0)
-
-4. [Stanford University - CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/neural-networks-1/)
+2. [Stanford University - CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/neural-networks-1/)
