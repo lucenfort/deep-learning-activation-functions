@@ -120,8 +120,8 @@ x, & x > 0 \\
 
 ![Gráfico das Funções de Ativação e suas Derivadas](newplot.png)
 
-🔹 **Função de ativação** → **Violeta** 🟣  
-🔸 **Derivada** → **Laranja** 🟠  
+- **Função de ativação** → **Violeta** 🟣  
+- **Derivada** → **Laranja** 🟠  
 
 ## 📜 Conclusão
 
